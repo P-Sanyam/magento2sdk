@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+magento:
+  base-url: "https://alfatools-dev.humdash.com/rest"
+  bearer-token: "a025rfqvt56w6e5c4y9uxeh5757pwlg8"
+  timeout-seconds: 30
+
+logging:
+  level:
+    com.magento2.integration: INFO
