@@ -16,7 +16,7 @@ Edit `src/main/resources/application.yml`:
 mvn spring-boot:run
 ```
 
-## Buildd runnable JAR
+## Build runnable JAR
 ```
 mvn clean package
 java -jar target/magento2-0.1.0.jar
@@ -50,4 +50,3 @@ Example request (products push):
   ]
 }
 ```
-# magento2sdk
