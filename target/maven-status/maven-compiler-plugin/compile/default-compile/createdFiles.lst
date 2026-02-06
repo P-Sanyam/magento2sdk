@@ -7,6 +7,7 @@ com/magento2/integration/client/CustomersClient.class
 com/magento2/integration/domain/ProductPushResult.class
 com/magento2/integration/auth/BearerTokenProvider.class
 com/magento2/integration/domain/ProductDraft.class
+com/magento2/integration/sdk/impl/MagentoCompanySdkImpl.class
 com/magento2/integration/sdk/MagentoProductsSdk.class
 com/magento2/integration/config/WebClientConfig.class
 com/magento2/integration/domain/Customer.class
@@ -14,15 +15,19 @@ com/magento2/integration/exception/MagentoApiException.class
 com/magento2/integration/api/ProductsController.class
 com/magento2/integration/domain/CustomerRequest.class
 com/magento2/integration/client/MagentoApiClient.class
+com/magento2/integration/sdk/MagentoCompanySdk.class
 com/magento2/integration/exception/GlobalExceptionHandler.class
 com/magento2/integration/config/MagentoSdkConfig.class
 com/magento2/integration/config/MagentoApiProperties.class
 com/magento2/integration/domain/CustomerSearchResponse.class
 com/magento2/integration/domain/MagentoProductRequest.class
+com/magento2/integration/client/CompanyClient.class
 com/magento2/integration/domain/PushProductsResponse.class
 com/magento2/integration/sdk/impl/MagentoProductsSdkImpl.class
+com/magento2/integration/service/CompanyService.class
 com/magento2/integration/config/MagentoClientConfig.class
 com/magento2/integration/domain/PushProductsRequest.class
+com/magento2/integration/api/CompanyController.class
 com/magento2/integration/service/ProductsService.class
 com/magento2/integration/domain/CustomerAddress.class
 com/magento2/integration/exception/ResourceNotFoundException.class
