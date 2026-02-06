@@ -7,9 +7,11 @@ import com.magento2.integration.domain.PushProductsResponse;
 import com.magento2.integration.sdk.MagentoProductsSdk;
 import com.magento2.integration.service.ProductsService;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 import reactor.core.publisher.Mono;
 
 @Component
+@Validated
 public class MagentoProductsSdkImpl implements MagentoProductsSdk {
     private final ProductsService productsService;
 
@@ -30,6 +32,21 @@ public class MagentoProductsSdkImpl implements MagentoProductsSdk {
     @Override
     public Mono<String> bulkCreateProductsRaw(String rawJsonArrayPayload) {
         return productsService.bulkCreateProductsRaw(rawJsonArrayPayload);
+    }
+
+    @Override
+    public Mono<String> getAttributeSetsListRaw() {
+        return productsService.getAttributeSetsListRaw();
+    }
+
+    @Override
+    public Mono<String> getProductAttributesRaw() {
+        return productsService.getProductAttributesRaw();
+    }
+
+    @Override
+    public Mono<String> getProductBySkuRaw(String sku) {
+        return productsService.getProductBySkuRaw(sku);
     }
 
 }

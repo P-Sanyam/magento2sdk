@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="magento2" />
+        <module name="magento2-sdk" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="magento2" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

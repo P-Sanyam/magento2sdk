@@ -47,7 +47,21 @@ public class ProductsService {
     }
 
     public Mono<String> bulkCreateProductsRaw(String rawJsonArrayPayload) {
-        return productsClient.bulkCreateProducts(rawJsonArrayPayload);
+        String payload = rawJsonArrayPayload != null ? rawJsonArrayPayload.trim() : null;
+        return productsClient.bulkCreateProducts(payload);
+    }
+
+    public Mono<String> getAttributeSetsListRaw() {
+        return productsClient.getAttributeSetsList();
+    }
+
+    public Mono<String> getProductAttributesRaw() {
+        return productsClient.getProductAttributes();
+    }
+
+    public Mono<String> getProductBySkuRaw(String sku) {
+        String trimmed = sku != null ? sku.trim() : null;
+        return productsClient.getProductBySku(trimmed);
     }
 
     private Mono<ProductPushResult> pushSingleProduct(ProductDraft draft) {

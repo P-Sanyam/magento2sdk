@@ -26,6 +26,7 @@ public class CustomersService {
     }
 
     public Mono<String> searchCustomersByEmail(String email) {
+//        String normalizedEmail = email.trim().toLowerCase();
         return customersClient.searchCustomersByEmail(email);
     }
 

@@ -1,6 +1,10 @@
 package com.magento2.integration.sdk;
 
 import com.magento2.integration.domain.CustomerDraft;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import reactor.core.publisher.Mono;
 
 /**
@@ -8,9 +12,9 @@ import reactor.core.publisher.Mono;
  * Exposed to host applications.
  */
 public interface MagentoCustomersSdk {
-    Mono<String> createCustomer(CustomerDraft draft);
+    Mono<String> createCustomer(@Valid CustomerDraft draft);
 
-    Mono<String> getCustomerById(Integer customerId);
+    Mono<String> getCustomerById(@NotNull Integer customerId);
 
-    Mono<String> searchCustomersByEmail(String email);
+    Mono<String> searchCustomersByEmail(@NotBlank @Email String email);
 }
