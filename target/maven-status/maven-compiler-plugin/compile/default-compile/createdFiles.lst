@@ -27,12 +27,17 @@ com/magento2/integration/sdk/impl/MagentoProductsSdkImpl.class
 com/magento2/integration/service/CompanyService.class
 com/magento2/integration/config/MagentoClientConfig.class
 com/magento2/integration/domain/PushProductsRequest.class
+com/magento2/integration/sdk/impl/MagentoCategorySdkImpl.class
 com/magento2/integration/api/CompanyController.class
 com/magento2/integration/service/ProductsService.class
+com/magento2/integration/client/CategoryClient.class
 com/magento2/integration/domain/CustomerAddress.class
+com/magento2/integration/api/CategoryControllers.class
 com/magento2/integration/exception/ResourceNotFoundException.class
 com/magento2/integration/service/CustomersService.class
 com/magento2/integration/domain/MagentoProduct.class
 com/magento2/integration/domain/CustomerDraft.class
+com/magento2/integration/sdk/MagentoCategorySdk.class
 com/magento2/integration/client/ProductsClient.class
+com/magento2/integration/service/CategoryService.class
 com/magento2/integration/domain/MagentoProductResponse.class
