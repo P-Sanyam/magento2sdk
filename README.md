@@ -16,7 +16,7 @@ Edit `src/main/resources/application.yml`:
 mvn spring-boot:run
 ```
 
-## Build runnable JAR
+## Buildd runnable JAR
 ```
 mvn clean package
 java -jar target/magento2-0.1.0.jar
