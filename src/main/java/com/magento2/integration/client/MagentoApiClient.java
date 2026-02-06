@@ -20,62 +20,62 @@ public class MagentoApiClient {
 
     public <T> Mono<T> get(String path, Map<String, String> query, Class<T> responseType) {
         return webClient.get()
-            .uri(uriBuilder -> {
-                var builder = uriBuilder.path(path);
-                if (query != null) {
-                    query.forEach(builder::queryParam);
-                }
-                return builder.build();
-            })
-            .retrieve()
-            .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
-                .defaultIfEmpty("")
-                .flatMap(body -> Mono.error(new MagentoApiException(response.statusCode(), body))))
-            .bodyToMono(responseType);
+                .uri(uriBuilder -> {
+                    var builder = uriBuilder.path(path);
+                    if (query != null) {
+                        query.forEach(builder::queryParam);
+                    }
+                    return builder.build();
+                })
+                .retrieve()
+                .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
+                        .defaultIfEmpty("")
+                        .flatMap(body -> Mono.error(new MagentoApiException(response.statusCode(), body))))
+                .bodyToMono(responseType);
     }
 
     public <T> Mono<T> post(String path, Object body, Class<T> responseType) {
         return webClient.post()
-            .uri(path)
-            .bodyValue(body)
-            .retrieve()
-            .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
-                .defaultIfEmpty("")
-                .flatMap(bodyText -> Mono.error(new MagentoApiException(response.statusCode(), bodyText))))
-            .bodyToMono(responseType);
+                .uri(path)
+                .bodyValue(body)
+                .retrieve()
+                .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
+                        .defaultIfEmpty("")
+                        .flatMap(bodyText -> Mono.error(new MagentoApiException(response.statusCode(), bodyText))))
+                .bodyToMono(responseType);
     }
 
     public <T> Mono<T> put(String path, Object body, Class<T> responseType) {
         return webClient.put()
-            .uri(path)
-            .bodyValue(body)
-            .retrieve()
-            .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
-                .defaultIfEmpty("")
-                .flatMap(bodyText -> Mono.error(new MagentoApiException(response.statusCode(), bodyText))))
-            .bodyToMono(responseType);
+                .uri(path)
+                .bodyValue(body)
+                .retrieve()
+                .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
+                        .defaultIfEmpty("")
+                        .flatMap(bodyText -> Mono.error(new MagentoApiException(response.statusCode(), bodyText))))
+                .bodyToMono(responseType);
     }
 
     public <T> Mono<T> post(String path, Object body, ParameterizedTypeReference<T> responseType) {
         return webClient.post()
-            .uri(path)
-            .bodyValue(body)
-            .retrieve()
-            .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
-                .defaultIfEmpty("")
-                .flatMap(bodyText -> Mono.error(new MagentoApiException(response.statusCode(), bodyText))))
-            .bodyToMono(responseType);
+                .uri(path)
+                .bodyValue(body)
+                .retrieve()
+                .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
+                        .defaultIfEmpty("")
+                        .flatMap(bodyText -> Mono.error(new MagentoApiException(response.statusCode(), bodyText))))
+                .bodyToMono(responseType);
     }
 
     public <T> Mono<T> put(String path, Object body, ParameterizedTypeReference<T> responseType) {
         return webClient.put()
-            .uri(path)
-            .bodyValue(body)
-            .retrieve()
-            .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
-                .defaultIfEmpty("")
-                .flatMap(bodyText -> Mono.error(new MagentoApiException(response.statusCode(), bodyText))))
-            .bodyToMono(responseType);
+                .uri(path)
+                .bodyValue(body)
+                .retrieve()
+                .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(String.class)
+                        .defaultIfEmpty("")
+                        .flatMap(bodyText -> Mono.error(new MagentoApiException(response.statusCode(), bodyText))))
+                .bodyToMono(responseType);
     }
 
     public void logDebug(String message, Object... args) {
