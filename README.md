@@ -13,7 +13,7 @@ Edit `src/main/resources/application.yml`:
 
 ## Run
 ```
-mvn spring-boot:run
+mvn spring]-boot:run
 ```
 
 ## Build runnable JAR
